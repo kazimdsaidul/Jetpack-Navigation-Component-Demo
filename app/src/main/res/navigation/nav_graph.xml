@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.saidul.jetpacknavigationcomponentdemo.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_chooseRecipentFragment"
+            app:destination="@id/chooseRecipentFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewTranstionsFragment"
+            app:destination="@id/viewTranstionsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_chooseRecipentFragment2"
+            app:destination="@id/chooseRecipentFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewBalanceFragment"
+            app:destination="@id/viewBalanceFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseRecipentFragment"
+        android:name="com.saidul.jetpacknavigationcomponentdemo.ChooseRecipentFragment"
+        android:label="ChooseRecipentFragment">
+        <action
+            android:id="@+id/action_chooseRecipentFragment_to_specipfyAmountFragment2"
+            app:destination="@id/specipfyAmountFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewTranstionsFragment"
+        android:name="com.saidul.jetpacknavigationcomponentdemo.ViewTranstionsFragment"
+        android:label="ViewTranstionsFragment"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right"
+        app:popEnterAnim="@android:anim/slide_in_left"
+        app:popExitAnim="@android:anim/slide_out_right" />
+    <fragment
+        android:id="@+id/specipfyAmountFragment"
+        android:name="com.saidul.jetpacknavigationcomponentdemo.SpecipfyAmountFragment"
+        android:label="fragment_specipfy_amount"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right"
+        app:popEnterAnim="@android:anim/slide_in_left"
+        app:popExitAnim="@android:anim/slide_out_right"
+        tools:layout="@layout/fragment_specipfy_amount">
+        <action
+            android:id="@+id/action_specipfyAmountFragment_to_viewConfirmationFragment"
+            app:destination="@id/viewConfirmationFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewConfirmationFragment"
+        android:name="com.saidul.jetpacknavigationcomponentdemo.ViewConfirmationFragment"
+        android:label="fragment_view_confirmation"
+        tools:layout="@layout/fragment_view_confirmation">
+
+        <argument
+            android:name="money"
+            app:argType="com.saidul.jetpacknavigationcomponentdemo.model.Money" />
+        <action
+            android:id="@+id/action_viewConfirmationFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewBalanceFragment"
+        android:name="com.saidul.jetpacknavigationcomponentdemo.ViewBalanceFragment"
+        android:label="ViewBalanceFragment" />
+</navigation>
